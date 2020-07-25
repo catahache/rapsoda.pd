@@ -1,6 +1,8 @@
+import java.io.BufferedWriter;
+import java.util.ArrayList;
+import java.io.FileWriter;
 import java.util.Set;
 import java.util.Map;
-import java.util.ArrayList;
 
 class Ideas {
 
@@ -82,7 +84,27 @@ float elasticidad(String p) {
     return elas;
 }
 
-void cantar(int cuerpo_id, int rapsoda_id,String p) {
-    PrintWriter output;
-    output = createWriter("rapsoda"+Integer.toString(cuerpo_id)+"_"+Integer.toString(rapsoda_id)+".txt");
+void entelequia(File f){
+  File parentDir = f.getParentFile();
+  try{
+    parentDir.mkdirs();
+    f.createNewFile();
+  }catch(Exception e){
+    e.printStackTrace();
+  }
 }
+
+void recordar(String filename, String p){
+  File f = new File(dataPath(filename));
+  if(!f.exists()){
+    entelequia(f);
+  }
+  try {
+    PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(f, true)));
+    out.print(p+" ");
+    out.close();
+  }catch (IOException e){
+      e.printStackTrace();
+  }
+}
+

@@ -7,29 +7,39 @@ OscP5 oscP5;///objeto osc
 NetAddress myRemoteLocation;//objeto net
 
 /*====| inicializacion de objetos importantes |====*/
+int contador = 0;
+int lim;
 Ideas ideas;
 Cuerpos cuerpo[];
-int cantidad = 10;//cantidad de rapsodas
-Matrices matris[][];
+int cantidad = 10;//cantidad de cuerpos
+int CANTIDAD = 10;//cantidad de rapsodas
+Matrices matriz[][];
 int cant_mat_x = 100;//cantidad de cuadros en x
 int cant_mat_y = 1;//cantidad de cuadros en y
+
+
+void SETUP () {
+    lim = int(random(1,2000));
+
+    /*====| creacion de los cuerpos |====*/
+    cuerpo = new Cuerpos[cantidad];
+    for ( int i=0; i<cantidad; i++ ) {
+        cuerpo[i] = new Cuerpos(i, ideas,CANTIDAD);//inicio cada objeto
+    }
+}
 
 
 void setup() {
     ideas = new Ideas("test.txt");
     size(1366, 768);//pantalla
 
-    /*====| creacion de los cuerpos |====*/
-    cuerpo = new Cuerpos[cantidad];
-    for ( int i=0; i<cantidad; i++ ) {
-        cuerpo[i] = new Cuerpos(i, ideas);//inicio cada objeto
-    }
+    SETUP();
 
-    /*====| creacion de la matris |====*/
-    matris = new Matrices [cant_mat_x][cant_mat_y];//inico clase
+    /*====| creacion de la matriz |====*/
+    matriz = new Matrices [cant_mat_x][cant_mat_y];//inico clase
     for ( int i=0; i<cant_mat_x; i++ ) {
         for ( int j=0; j<cant_mat_y; j++ ) {
-            matris[i][j] = new Matrices(i, j, cant_mat_x, cant_mat_y);//inicio cada objeto
+            matriz[i][j] = new Matrices(i, j, cant_mat_x, cant_mat_y);//inicio cada objeto
         }
     }
 
@@ -40,29 +50,33 @@ void setup() {
     background(0);
 }
 
+
+
 void draw() {
     noStroke();
     //fill(0, 0, 0, 15);
-    fill(int(random(0, 255)), int(random(0, 255)), int(random(0, 255)), 15);
-    rect(0, 0, width, height);
+    fill(int(random(0, 255)), int(random(0, 255)), int(random(0, 255)), 7);
+    rect(0, 0, width/2, height/2);
+    fill(int(random(0, 255)), int(random(0, 255)), int(random(0, 255)), 7);
+    rect( width/2, height/2, width/2, height/2);
 
     /*====| movimiento de los cuerpos |====*/
     for ( int i=0; i<cantidad; i++ ) {
         cuerpo[i].update();
     }
 
-    /*====| revisar estado de la matris |====*/
+    /*====| revisar estado de la matriz |====*/
     for ( int i=0; i<cant_mat_x; i++ ) {
         for ( int j=0; j<cant_mat_y; j++ ) {
             boolean ocupado = false;
             boolean encontro = false;
             for ( int k=0; k<cantidad; k++ ) {
-                ocupado = matris[i][j].compara(cuerpo[k].x, cuerpo[k].y);
+                ocupado = matriz[i][j].compara(cuerpo[k].x, cuerpo[k].y);
                 if (ocupado) {
                     encontro=true;
                 }
             }
-            matris[i][j].update(encontro);
+            matriz[i][j].update(encontro);
         }
     }
 
@@ -71,20 +85,31 @@ void draw() {
         cuerpo[i].dibuja();
     }
 
-    /*====| dibjujo matris |====*/
+    /*====| dibjujo matriz |====*/
     for ( int i=0; i<cant_mat_x; i++ ) {
         for ( int j=0; j<cant_mat_y; j++ ) {
-        matris[i][j].dibujar();
-            if (matris[i][j].enviar) {
-                matris[i][j].enviar = false;
-                /*====| envier mensaje por oscP5 |====*/
+        matriz[i][j].dibujar();
+            if (matriz[i][j].enviar) {
+                matriz[i][j].enviar = false;
+                /*====| enviar mensaje por oscP5 |====*/
                 OscMessage myMessage = new OscMessage("/t");//encabezado
                 int numero = (i+1)+(cant_mat_y * j);
                 myMessage.add(numero);//mensaje
                 oscP5.send(myMessage, myRemoteLocation);//envio mensaje
-                println(numero);
+                //println(numero);
             }
         }
     }
     //envio osc
+    if (contador == lim) {
+        SETUP();
+        contador = 0;
+        fill(0,0,0,200);
+        rect( width/2, 0, width/2, height/2);
+        fill(0,0,0,200);
+        rect( 0, height/2, width/2, height/2);
+    } else {
+        contador++;
+    }
+    println(lim+"->"+contador);
 }

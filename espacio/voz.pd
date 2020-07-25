@@ -15,64 +15,64 @@
 #X obj 560 187 moses 75, f 16;
 #X obj 342 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 360 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 340 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 378 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 358 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 396 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 376 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 414 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 394 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 432 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 412 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 450 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 430 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 468 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 448 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 485 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 465 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 503 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 483 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 521 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 501 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 539 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 519 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 557 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 537 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 575 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 555 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 593 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 573 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 611 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 591 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 629 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 609 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 646 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 626 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 664 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 644 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 682 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 662 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 700 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 680 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 718 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 698 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 736 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 716 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 754 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 734 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 772 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 752 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 790 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 770 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 227 1456 necesito espacio abajo;
 #X floatatom 836 536 5 0 0 0 - - -;
 #X obj 552 1147 *~;
 #X floatatom 184 536 5 0 0 0 - - -;
 #X obj 526 1147 *~;
-#X floatatom 396 1080 5 0 0 0 - - -;
-#X floatatom 760 1080 5 0 0 0 - - -;
-#X obj 526 378 route 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64
+#X floatatom 336 1088 5 0 0 0 - - -;
+#X floatatom 760 1088 5 0 0 0 - - -;
+#X obj 506 378 route 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64
 68 72 76 80 84 88 92 96 100, f 14;
 #X obj 184 793 expr ((($f1 - $f2) * ($f5 - $f4)) / ($f3 - $f2)) + $f4
 \;, f 14;
@@ -99,8 +99,8 @@
 #X text -270 19 RAPSODA'S VOICE, f 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X coords 0 1 100 -1 50 120 1 0 0;
-#X restore 434 361 graph;
-#X text 452 372 SONIDO, f 1;
+#X restore 414 361 graph;
+#X text 432 372 SONIDO, f 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X coords 0 1 100 -1 50 225 1 0 0;
 #X restore 1010 617 graph;
@@ -114,7 +114,7 @@
 #X text 129 627 MAPEO| VOL |IZQ, f 1;
 #X text 1028 628 MAPEO |VOL |DER, f 1;
 #X msg 997 93 \; pd dsp \$1;
-#X obj 997 66 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 997 66 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X coords 0 1 100 -1 50 170 1 0 0;
@@ -139,7 +139,7 @@
 #X obj 591 1273 - 100;
 #X obj 524 1194 freeverb~;
 #X obj 1278 1030 hsl 36 24 0 1 0 0 empty empty empty -2 -8 0 10 -232576
--1 -1 146 1;
+-1 -1 2625 1;
 #X obj 1275 939 expr ((($f1 - $f2) * ($f5 - $f4)) / ($f3 - $f2)) +
 $f4 \;, f 14;
 #X obj 1278 828 float \$1, f 4;
@@ -153,7 +153,7 @@ $f4 \;, f 14;
 #X msg 1346 800 0;
 #X msg 1275 1059 wet \$1;
 #X obj -165 1030 hsl 36 24 0 1 0 0 empty empty empty -2 -8 0 10 -204786
--1 -1 214 1;
+-1 -1 1214 1;
 #X obj -168 939 expr ((($f1 - $f2) * ($f5 - $f4)) / ($f3 - $f2)) +
 $f4 \;, f 14;
 #X obj -165 828 float \$1, f 4;
@@ -196,6 +196,7 @@ $f4 \;, f 14;
 #X msg 351 619 92;
 #X msg 391 620 103;
 #X obj 538 1068 osc~;
+#X msg 570 1068 0;
 #X connect 0 0 1 0;
 #X connect 1 11 2 0;
 #X connect 2 0 5 0;
@@ -368,3 +369,5 @@ $f4 \;, f 14;
 #X connect 143 0 144 0;
 #X connect 144 0 44 0;
 #X connect 144 0 42 0;
+#X connect 145 0 45 0;
+#X connect 145 0 46 0;

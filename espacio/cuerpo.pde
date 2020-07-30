@@ -5,7 +5,7 @@ class Cuerpos {
 
     /*====| atributos |====*/
     Rapsoda objeto[];//objetos del tipo Rapsoda
-    int cantidad = 20;//cantidad de bolitas
+    int cantidad;//cantidad de bolitas
     int id;
     float x;
     Ideas ideas;
@@ -21,7 +21,8 @@ class Cuerpos {
     float limite_radio=random(3,6);
 
     /*====| constructor |====*/
-    Cuerpos(int _id,Ideas ideaz) {
+    Cuerpos(int _id,Ideas ideaz,int _cantidad) {
+        cantidad = _cantidad;
         ideas = ideaz;
         id = _id;
         x=random(width);
@@ -31,7 +32,7 @@ class Cuerpos {
         objeto = new Rapsoda [cantidad];//inico clase
 
         for ( int i=0 ; i<cantidad ; i++ ) {
-            objeto[i] = new Rapsoda(i,ideas);//inicio cada objeto
+            objeto[i] = new Rapsoda(id,i,ideas);//inicio cada objeto
         }
     }
 
@@ -90,7 +91,7 @@ class Cuerpos {
         for ( int i=cantidad-1; i>1 ; i-- ) {// dibujo
             objeto[i].dibuja(objeto[i-1].x, objeto[i-1].y);
         }
-        stroke(107,204,75,100);
+        //stroke(107,204,75,100);
         noFill();
         // ellipse(0, 0, 50, 50);
         popMatrix();

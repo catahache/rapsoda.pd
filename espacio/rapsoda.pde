@@ -1,6 +1,12 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+
 class Rapsoda {
 
     /*====| atributos |====*/
+    String recuerdos;
+
     Ideas ideas;
     String palabra;
     float x;//posicion
@@ -17,12 +23,13 @@ class Rapsoda {
     int id;//numero de bolia
 
     /* ===| constructor |=== */
-    Rapsoda(int _id,Ideas ideaz) {
+    Rapsoda(int cuerpo_id, int _id, Ideas ideaz) {
+        id = _id;//id del objeto
+        recuerdos = "r_"+cuerpo_id+"_"+id+".txt";
         ideas = ideaz;
         palabra = ideas.pp();
         x = 0;//posicin inicial
         y = 0;
-        id = _id;//id del objeto
         tam = tamano(palabra);//tamano
 
         pfinal_x = random(-10, 10);//random de la pos
@@ -38,6 +45,7 @@ class Rapsoda {
     /*====| comentario |====*/
     void update(float _x, float _y, float _radio) {
 
+        recordar(recuerdos, palabra);
         palabra = ideas.sp(palabra);
         tam = tamano(palabra);//tamano
         peso = peso(palabra);
@@ -69,3 +77,4 @@ class Rapsoda {
         ellipse(x, y, random(2,tam), random(2,tam));
     }
 }
+

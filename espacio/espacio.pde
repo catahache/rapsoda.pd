@@ -28,9 +28,8 @@ void SETUP () {
     }
 }
 
-
 void setup() {
-    ideas = new Ideas("test.txt");
+    ideas = new Ideas("registros.txt");
     size(1366, 768);//pantalla
 
     SETUP();
@@ -50,7 +49,14 @@ void setup() {
     background(0);
 }
 
-
+void mousePressed() {
+    /*====| enviar mensaje por oscP5 |====*/
+    OscMessage myMessage = new OscMessage("/t");//encabezado
+    int numero = -1;
+    myMessage.add(numero);//mensaje
+    oscP5.send(myMessage, myRemoteLocation);//envio mensaje
+    exit();
+}
 
 void draw() {
     noStroke();
